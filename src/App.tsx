@@ -1,35 +1,26 @@
 import React from 'react';
 import {useDataApi} from './hooks/useDataApi';
-import {Box, makeStyles, Typography} from '@material-ui/core';
 import {Auction} from './models/Auction';
-import {Alert} from '@material-ui/lab';
-
-const useStyles = makeStyles({
-    root: {
-        padding: 16,
-        maxWidth: 1024
-    }
-});
+import {Alert, Box, CircularProgress, Typography} from '@mui/material';
+import {AuctionCard} from './components/AuctionCard';
 
 
 function App() {
 
     const [data, isLoading, isError]: [Auction[], boolean, boolean] = useDataApi();
 
-    const classes = useStyles();
-
     return (
-        <Box className={classes.root}>
-            <Typography variant="h2" component="h1">
+        <Box sx={{height:'100vh'}}>
+            <Typography variant="h5" component="h1">
                 React Auction
             </Typography>
 
             {isError && <Alert severity="error">Error joining the server</Alert>}
 
+            {isLoading && <CircularProgress/>}
+
             {data?.map(auction =>
-                <Typography variant="h3" component="h2" key={auction.id}>
-                    {auction.auctionType} : {auction.inboundId} - {auction.outboundId}
-                </Typography>
+                <AuctionCard key={auction.id} auction={auction}/>
             )}
 
         </Box>
