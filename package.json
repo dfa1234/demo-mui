@@ -1,6 +1,7 @@
 {
   "name": "react-auctions",
   "version": "0.1.0",
+  "homepage": "https://dfa1234.github.io/react-auctions",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
