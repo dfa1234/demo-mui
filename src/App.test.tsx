@@ -15,7 +15,7 @@ test('renders the auction cards', async () => {
 
     render(<App/>);
 
-    const title = screen.getByText(/React Auction/i);
+    const title = screen.getByText(/React-Auction/i);
 
     expect(title).toBeInTheDocument();
 
