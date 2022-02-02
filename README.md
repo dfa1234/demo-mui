@@ -1,3 +1,3 @@
 # React Auction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is deployed here: https://dfa1234.github.io/react-auctions/
