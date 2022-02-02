@@ -4,23 +4,29 @@ import {Auction} from './models/Auction';
 import {Alert, Box, CircularProgress, Typography} from '@mui/material';
 import {AuctionCard} from './components/AuctionCard';
 
+const styles = {
+    defaultMargin: {mx: 2, my: 4},
+    centerLoading: {display: "flex", justifyContent: "center"}
+};
 
 function App() {
 
-    const [data, isLoading, isError]: [Auction[], boolean, boolean] = useDataApi();
+    const [auctions, isLoading, isError] = useDataApi<Auction[]>();
 
     return (
-        <Box sx={{height:'100vh'}}>
-            <Typography variant="h5" component="h1">
-                React Auction
+        <Box>
+            <Typography variant="h3" component="h1" sx={styles.defaultMargin} align="center">
+                React-Auction
             </Typography>
 
-            {isError && <Alert severity="error">Error joining the server</Alert>}
+            {isError && <Alert sx={styles.defaultMargin} severity="error">Error joining the server</Alert>}
 
-            {isLoading && <CircularProgress/>}
+            {isLoading && <Box sx={styles.centerLoading}><CircularProgress/></Box>}
 
-            {data?.map(auction =>
-                <AuctionCard key={auction.id} auction={auction}/>
+            {auctions?.map(auction =>
+                <Box sx={styles.defaultMargin} key={auction.id}>
+                    <AuctionCard auction={auction}/>
+                </Box>
             )}
 
         </Box>

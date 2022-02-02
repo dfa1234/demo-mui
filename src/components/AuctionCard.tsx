@@ -6,17 +6,26 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {Auction} from '../models/Auction';
+import {CardMedia} from '@mui/material';
 
 export const AuctionCard: FunctionComponent<{ auction: Auction }> = ({auction}) => {
     return (
-        <Card sx={{minWidth: 275}}>
+        <Card sx={{minWidth: 275}} variant="outlined">
+            <CardMedia
+                component="img"
+                height="140"
+                image={auction.imageUrl}
+            />
             <CardContent>
-                <Typography sx={{fontSize: 14}} color="text.secondary" gutterBottom>
+                <Typography gutterBottom variant="h5">
                     {auction.inboundId} - {auction.outboundId}
                 </Typography>
+                <Typography gutterBottom variant="body2">
+                    {auction.viewersCount} viewing this
+                </Typography>
             </CardContent>
-            <CardActions>
-                <Button size="small">Purchase</Button>
+            <CardActions sx={{justifyContent: "center"}}>
+                <Button variant="outlined">Now from {auction.currencySymbol} {auction.currentMinPrice}</Button>
             </CardActions>
         </Card>
     );

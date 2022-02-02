@@ -1,13 +1,12 @@
 import {useEffect, useState} from 'react';
-import {Auction} from '../models/Auction';
 
 // the s3 has a https certificate problem (probably using a self signed certificate)
 // so here copy-pasted the content in an anonymous json api
 const BASE_URL = 'https://api.jsonbin.io/b/61f9828d1960493ad1864f2a';
 
-export const useDataApi = () => {
+export const useDataApi = <T>() => {
 
-    const [data, setData] = useState<Auction[]>([]);
+    const [data, setData] = useState<T>();
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [isError, setIsError] = useState<boolean>(false);
 
@@ -31,5 +30,5 @@ export const useDataApi = () => {
         fetchData();
     }, []);
 
-    return [data, isLoading, isError] as [Auction[], boolean, boolean];
+    return [data, isLoading, isError] as [T, boolean, boolean];
 };
