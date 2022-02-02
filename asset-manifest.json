@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-auctions/static/css/main.683d81c0.css",
-    "main.js": "/react-auctions/static/js/main.d11d18bc.js",
+    "main.css": "/react-auctions/static/css/main.0235997e.css",
+    "main.js": "/react-auctions/static/js/main.6cd4df8c.js",
     "static/js/787.702bcf88.chunk.js": "/react-auctions/static/js/787.702bcf88.chunk.js",
     "static/media/roboto-all-400-normal.woff": "/react-auctions/static/media/roboto-all-400-normal.376ea5d93f71583052f6.woff",
     "static/media/roboto-latin-400-normal.woff2": "/react-auctions/static/media/roboto-latin-400-normal.4673b4537a84c7f7a130.woff2",
@@ -12,12 +12,12 @@
     "static/media/roboto-vietnamese-400-normal.woff2": "/react-auctions/static/media/roboto-vietnamese-400-normal.c0bec65d01f776c00c91.woff2",
     "static/media/roboto-greek-ext-400-normal.woff2": "/react-auctions/static/media/roboto-greek-ext-400-normal.bb723e8458c9c653e505.woff2",
     "index.html": "/react-auctions/index.html",
-    "main.683d81c0.css.map": "/react-auctions/static/css/main.683d81c0.css.map",
-    "main.d11d18bc.js.map": "/react-auctions/static/js/main.d11d18bc.js.map",
+    "main.0235997e.css.map": "/react-auctions/static/css/main.0235997e.css.map",
+    "main.6cd4df8c.js.map": "/react-auctions/static/js/main.6cd4df8c.js.map",
     "787.702bcf88.chunk.js.map": "/react-auctions/static/js/787.702bcf88.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.683d81c0.css",
-    "static/js/main.d11d18bc.js"
+    "static/css/main.0235997e.css",
+    "static/js/main.6cd4df8c.js"
   ]
 }
