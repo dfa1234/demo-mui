@@ -1,8 +1,8 @@
+import { Alert, Box, CircularProgress, Typography } from '@mui/material';
 import React from 'react';
-import {useDataApi} from './hooks/useDataApi';
-import {Auction} from './models/Auction';
-import {Alert, Box, CircularProgress, Typography} from '@mui/material';
-import {AuctionCard} from './components/AuctionCard';
+import { AuctionCard } from './components/AuctionCard';
+import { useDataApi } from './hooks/useDataApi';
+import { Auction } from './models/Auction';
 
 const styles = {
     defaultMargin: {mx: 2, my: 4},
@@ -16,7 +16,7 @@ function App() {
     return (
         <Box>
             <Typography variant="h3" component="h1" sx={styles.defaultMargin} align="center">
-                React-Auction
+                demo-mui
             </Typography>
 
             {isError && <Alert sx={styles.defaultMargin} severity="error">Error joining the server</Alert>}

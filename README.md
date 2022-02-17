@@ -1,3 +1,3 @@
-# React Auction
+# demo-mui
 
-This project is deployed here: https://dfa1234.github.io/react-auctions/
+Deployed here https://dfa1234.github.io/demo-mui/

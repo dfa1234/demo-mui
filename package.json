@@ -1,7 +1,7 @@
 {
-  "name": "react-auctions",
+  "name": "demo-mui",
   "version": "0.1.0",
-  "homepage": "https://dfa1234.github.io/react-auctions",
+  "homepage": "https://dfa1234.github.io/demo-mui",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
